@@ -1,0 +1,713 @@
+@font-face {
+    font-family: 'Dance';
+    src: url(../font/DancingScript-Regular.ttf);
+}
+@font-face {
+    font-family: 'Serif';
+    src: url(../font/YoungSerif-Regular.ttf);
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(../font/Roboto-Regular.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 991px){
+    .plane-animation section{
+        height: fit-content !important;
+    }
+}
+body{
+    position: relative;
+}
+html{
+    scroll-behavior: smooth;
+}
+.blur{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: .7;
+}
+.plane-animation{
+    overflow: hidden;
+}
+.plane-animation .plane{
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    width: 80px;
+    height: 80px;
+    transform: rotate(10deg);
+    z-index: 2;
+}
+
+.plane-animation section{
+    height: 100vh;
+    border-top: 1px solid cyan;
+    position: relative;
+}
+.plane-animation header{
+    position: relative;
+    z-index: 1;
+}
+.plane-animation{
+    background-image: url(../images/skyBG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* header style */
+.plane-animation header{
+    padding: 24px 80px;
+    display: flex;
+    justify-content: space-around;
+}
+.plane-animation header ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+    list-style: none;
+}
+.plane-animation header a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    -webkit-text-stroke-color: yellow;
+    -webkit-text-stroke-width: 1px;
+    font-family: 'Dance'; 
+}
+/* header style */
+
+/* section1 style */
+.section1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-weight: 900;
+}
+.section1 > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section1 h1{
+    font-size: 80px;
+    color: yellow;
+    font-style: italic;
+    font-family: 'Dance';
+}
+.section1 p{
+    font-size: 40px;
+    font-weight: 600;
+    color: yellowgreen;
+    font-family: 'Serif';
+    margin: 15px 0;
+}
+.section1 input{
+    width: 600px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Roboto';
+    padding: 20px 130px 20px 20px;
+    outline: 0;
+    border: 2px solid peachpuff;
+    background-color: transparent;
+    color: white;
+}
+.section1 input::placeholder{
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto';
+}
+.section1 button{
+    text-align: center;
+    padding: 15px 25px;
+    border-radius: 10px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Roboto';
+    font-size: 16px;
+    background-color: peachpuff;
+    color: white;
+    border: none;
+    transition: all .5s ease-in-out;
+}
+.section1 button:hover{
+    color: navy;
+    cursor: pointer;
+    background-color: palevioletred;
+}
+/* section1 style */
+
+/* section2 style */
+.section2{
+    position: relative;
+    padding: 100px 0;
+}
+.section2 .blur{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: grey;
+    opacity: .5;
+    z-index: 0;
+}
+.section2 .about_us{
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+.section2 .chair{
+    height: 100%;
+}
+
+.section2 .about{
+    color: peachpuff;
+    text-transform: capitalize;
+    font-size: 24px;
+    font-family: "Serif";
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    margin-bottom: 20px;
+    width: 200px;
+}
+.section2 .about::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    height: 4px;
+    background: peachpuff;
+    width: 50px;
+}
+.section2 .about::after{
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: -50px;
+    height: 2px;
+    background: peachpuff;
+    width: 120px;
+}
+.section2 h2{
+    color: magenta;
+    font-size: 36px;
+    font-family: "Serif";
+    font-style: italic;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.section2 h2 span{
+    color: magenta;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: yellow;
+}
+.section2 p{
+    color: peachpuff;
+    font-size: 20px;
+    font-family: "Roboto";
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.section2 button{
+    width: 150px;
+    padding: 20px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255, 218, 185, 0.3);
+    color: magenta;
+    transition: all 1s;
+}
+.section2 button:hover{
+    background-color: peachpuff;
+    cursor: pointer;
+    color: navy;
+}
+.section2 .about-image{
+    background-image: url(../images/about.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    width: 360px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    /* animation: moving-image 15s infinite linear; */
+}
+.section2 .lines{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    
+    background: linear-gradient(
+        rgb(242, 242, 160),
+        rgb(242, 242, 160) 1px,
+        transparent 1px,
+        transparent 9px
+    );
+    background-size: 100% 9px;
+    animation: moving-lines 22s infinite linear;
+}
+@keyframes moving-lines {
+    from{
+        background-position: 0% 0%;
+    }
+    to{
+        background-position: 0% -100%;
+    }
+}
+@keyframes moving-image {
+    0%, 100%{
+        background-size: 100% 100%;
+    }
+    20%{
+        background-size: 100% 150%;
+    }
+    40%{
+        background-size: 170% 130%;
+    }
+    60%{
+        background-size: 180% 150%;
+    }
+    80%{
+        background-size: 130% 150%;
+    }
+}
+/* section2 style */
+
+
+/* section3 style */
+.section3{
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section3 h2{
+    font-size: 60px;
+    font-style: italic;
+    font-family: 'Roboto';
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    text-transform: uppercase;
+    color: yellow;
+}
+.section3 .popular_places{
+    width: 250px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 40s linear infinite;
+}
+@keyframes rotate {
+    0%{
+        transform: perspective(2000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(2000px) rotateY(360deg);
+    }
+}
+.section3 .gallery{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 15px;
+}
+.section3 .img1{
+    background-image: url(../images/place1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section3 .img2{
+    background-image: url(../images/place2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section3 .img3{
+    background-image: url(../images/place3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section3 .img4{
+    background-image: url(../images/place4.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section3 .img5{
+    background-image: url(../images/place5.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section3 .img6{
+    background-image: url(../images/place6.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section3 .img7{
+    background-image: url(../images/place7.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section3 .img8{
+    background-image: url(../images/place8.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section3 .sale, .section3 .place{
+    background-color: peachpuff;
+    opacity: .7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section3 .place{
+    width: 120px;
+    height: 40px;
+}
+.section3 .sale{
+    width: 100px;
+    height: 40px;
+}
+.section3 .place{
+    margin-left: auto;
+}
+.section3 strong{
+    color: magenta;
+    font-size: 16px;
+}
+.section3 .popular_places:hover{
+    cursor: pointer;
+}
+
+.section3 .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+.section3 .popup-gallery {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    z-index: 3;
+    text-align: center;
+    width: 500px;
+    height: 600px;
+}
+.section3 .popup-image {
+    width: 100%;
+    height: 100%;
+}
+.section3 .popup-gallery a{
+    width: 120px;
+    height: 60px;
+    text-align: center;
+    background-color: peachpuff;
+    color: navy;
+    font-family: 'Roboto';
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+    border: 1px solid magenta;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #0004, #0004);
+}
+.section3 .popup-gallery a:hover{
+    border-radius: 10px 0 50% 0;
+}
+.section3 .place-info{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+}
+.section3 .sale-info{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}
+.section3 .place-info::before, .section3 .sale-info::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: peachpuff;
+    opacity: 0.5; /* Adjust the opacity as needed */
+    z-index: -1;
+}
+.section3 h3{
+    color: navy;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: italic;
+    position: relative;
+    z-index: 5;
+}
+
+/* section3 style */
+
+
+/* section4 style */
+.section4{
+    padding: 100px;
+    height: 150vh !important;
+}
+.section4 .services{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.section4 h6{
+    font-family: 'Roboto';
+    font-size: 32px;
+    color: magenta;
+    text-align: center;
+    position: relative;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+.section4 h6::before{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 4px;
+    left: -10px;
+    top: 50%;
+    transform: rotate(15deg) translateY(-50%);
+    background-color: magenta;
+}
+.section4 h6::after{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 4px;
+    right: -10px;
+    top: 50%;
+    transform: rotate(-15deg) translateY(-50%);
+    background-color: magenta;
+}
+.section4 h2{
+    font-size: 60px;
+    font-style: italic;
+    font-family: 'Roboto';
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    color: peachpuff;
+}
+.section4 .service > div{
+    padding: 20px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 100%;
+}
+.section4 .service{
+    width: 25%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: all .5s;
+    border: 1px solid peachpuff;
+}
+.section4 .service:hover{
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.section4 i{
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+.section4 h5{
+    font-size: 36px;
+    font-family: 'Dance';
+    color: magenta;
+    text-align: center;
+}
+.section4 p{
+    font-size: 16px;
+    color: peachpuff;
+    font-family: 'Serif';
+}
+/* section4 style */
+
+
+/* section5 style */
+.section5{
+    padding: 100px 150px;
+    height: fit-content !important;
+}
+.section5 .booking{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid magenta;
+    border-radius: 20px;
+    display: flex;
+    gap: 40px;
+    padding: 30px 50px;
+    box-shadow: 20px 20px 200px peachpuff;
+}
+.section5 .booking > div:nth-child(1){
+    width: 45%;
+}
+.section5 .booking h5{
+    font-size: 24px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    color: magenta;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.section5 .booking h2{
+    font-size: 36px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    color: magenta;
+    text-transform: capitalize;
+    margin-bottom: 24px;
+}
+.section5 .booking p{
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    color: peachpuff;
+}
+.section5 .booking a{
+    width: 120px;
+    height: 60px;
+    border: 2px solid peachpuff;
+    background-color: transparent;
+    border-radius: 10px;
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-family: 'Roboto';
+    color: magenta;
+    transition: .5s;
+}
+.section5 .booking a:hover{
+    background-color: magenta;
+    color: peachpuff;
+    border: none;
+    cursor: pointer;
+}
+.section5 .booking > div:nth-child(2){
+    width: 55%;
+}
+.section5 .booking input, .section5 .booking select, .section5 .booking textarea{
+    width: 100%;
+    padding: 16px 24px;
+    border: 1px solid peachpuff;
+    background-color: transparent;
+    outline: 0;
+    color: peachpuff;
+    font-size: 16px;
+    font-family: 'Roboto';
+}
+.section5 .booking input::placeholder, .section5 .booking textarea::placeholder{
+    color: peachpuff;
+    font-size: 16px;
+    opacity: .5;
+}
+.section5 .booking select{
+    -webkit-appearance: none;
+    color: peachpuff;
+    opacity: .9;
+}
+.section5 .booking textarea{
+    margin-top: 16px;
+    height: 100px;
+    resize: none;
+}
+.section5 .booking input[type=submit]{
+    margin-top: 16px; 
+    cursor: pointer;
+    padding: 25px;
+}
+/* section5 style */
+
+
+/*footer style*/
+footer{
+    border-top: 1px solid cyan;
+    height: 200px;
+    position: relative;
+}
+/*footer style*/
